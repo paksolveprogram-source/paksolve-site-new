@@ -1,0 +1,311 @@
+/* PakSolve – Educational Program Website
+   Edit colors, fonts, and spacing below to match your brand. */
+
+:root {
+  --color-primary: #0f766e;
+  --color-primary-dark: #0d9488;
+  --color-accent: #f59e0b;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-heading: "Georgia", "Times New Roman", serif;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(15, 118, 110, 0.12);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* Navigation */
+.site-header {
+  background: var(--color-card);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav a:hover {
+  background: var(--color-bg);
+  color: var(--color-primary);
+}
+
+.site-nav a.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Main content area */
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  margin-top: 0;
+}
+
+h1 { font-size: 2rem; margin-bottom: 1rem; }
+h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+p {
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+/* Hero section (home page) */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  background: linear-gradient(180deg, var(--color-card) 0%, var(--color-bg) 100%);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero .tagline {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin: 0 auto 1.5rem;
+}
+
+.hero .cta {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.hero .cta:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Cards / sections */
+.card {
+  background: var(--color-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ */
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--color-text);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item .answer {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-bg);
+}
+
+/* Signup form */
+.signup-form {
+  max-width: 420px;
+  margin: 0 auto 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  background: var(--color-card);
+  color: var(--color-text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: var(--color-primary-dark);
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 3rem;
+}
+
+.site-footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Page title (for FAQ, Signup) */
+.page-title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-primary);
+  display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.75rem; }
+  .nav-inner { justify-content: center; }
+  .site-nav { justify-content: center; }
+}
