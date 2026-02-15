@@ -6,76 +6,169 @@
   <title>Organisers – PakSolve</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+  <!-- Chatbot Icon -->
+<div id="chatbot-icon">
+  <img src="images/LOGO.png" alt="PakSolve Assistant">
+  <div class="chatbot-tooltip">Ask PakSolve Assistant</div>
+</div>
+
+<!-- Chat Window -->
+<div id="chatbot-window">
+  <div class="chat-header">
+    <span>PakSolve Assistant</span>
+    <button id="chat-close">✕</button>
+  </div>
+
+  <div id="chat-messages"></div>
+
+  <div class="chat-input-area">
+    <input id="chat-input" type="text" placeholder="Type your message...">
+    <button id="chat-send">Send</button>
+  </div>
+</div>
+
+<script src="chatbot.js"></script>
+<script>
+  initChatbot();
+</script>
 <body>
+
+  <!-- ── NAVIGATION BAR ── same on every page, only class="active" changes -->
   <header class="site-header">
     <div class="nav-inner">
-      <a href="index.html" class="site-logo">PakSolve</a>
+      <a href="index.html" class="site-logo">
+        <img
+          src="images/LOGO.png"
+          alt="PakSolve"
+          class="site-logo-img"
+          width="56"
+          height="56"
+        >
+        <span class="site-logo-text">PakSolve</span>
+      </a>
       <nav class="site-nav">
         <a href="index.html">Home</a>
         <a href="faq.html">FAQ</a>
         <a href="organisers.html" class="active">Organisers</a>
+        <!-- class="active" is on THIS link because we are on the Organisers page -->
         <a href="signup.html">Sign Up</a>
       </nav>
     </div>
   </header>
 
+
+  <!-- ── MAIN CONTENT ── -->
   <main class="main-content">
+
     <h1 class="page-title">Meet the Organisers</h1>
-    <p class="organisers-intro">PakSolve is run by Pakistani undergrads at MIT who have represented Pakistan at International Math and Physics Olympiads. Here’s who’s behind the program.</p>
+    <!-- class="page-title" adds the teal decorative underline below the heading -->
 
-    <div class="organisers-grid">
-      <article class="organiser-card card">
-        <div class="organiser-image-wrap">
-          <img src="images/organisers/organiser1.jpg" alt="Organiser 1" class="organiser-image" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
-        </div>
-        <h3 class="organiser-name">Organiser Name 1</h3>
-        <p class="organiser-bio">Short paragraph about this organiser—background, role in PakSolve, and a line or two about their interests or achievements.</p>
+    <p class="organisers-intro">PakSolve is run by Pakistani undergrads at MIT who have represented Pakistan at International Math and Physics Olympiads. Here's who's behind the program.</p>
+
+
+    <!-- ── ORGANISER GRID ──
+         Responsive grid — 3 columns on desktop, 2 on tablet, 1 on phone.
+         To add a new organiser: copy one <article> block and paste it here.
+         To remove one: delete one <article> block.
+    ── -->
+    <div class="organiser-grid">
+
+      <!-- ── ORGANISER 1 ── -->
+      <article class="organiser-card">
+        <!--
+          <article> = self-contained content block (good for profile cards).
+          class="organiser-card" styles it as a white rounded box.
+        -->
+        <img
+          src="images/organisers/organiser1.jpg"
+          alt="Organiser 1"
+          class="organiser-photo"
+          loading="lazy"
+          onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'"
+        >
+        <!--
+          src = path to the photo. Put real photos in images/organisers/ folder.
+          alt = description for screen readers. Replace with actual name.
+          class="organiser-photo" = styles it as a circle with fixed size.
+          loading="lazy" = only loads when scrolled into view (faster page load).
+          onerror = shows grey placeholder if photo file is missing.
+        -->
+        <h3>Organiser Name 1</h3>
+        <!-- Replace with real name -->
+        <p>Short paragraph about this organiser — background, role in PakSolve, and a line or two about their interests or achievements.</p>
+        <!-- Replace with real bio -->
       </article>
 
-      <article class="organiser-card card">
-        <div class="organiser-image-wrap">
-          <img src="images/organisers/organiser2.jpg" alt="Organiser 2" class="organiser-image" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
-        </div>
-        <h3 class="organiser-name">Organiser Name 2</h3>
-        <p class="organiser-bio">Short paragraph about this organiser—background, role in PakSolve, and a line or two about their interests or achievements.</p>
+
+      <!-- ── ORGANISER 2 ── (copy/paste this block to add more) -->
+      <article class="organiser-card">
+        <img src="images/organisers/organiser2.jpg" alt="Organiser 2" class="organiser-photo" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
+        <h3>Organiser Name 2</h3>
+        <p>Short paragraph about this organiser — background, role in PakSolve, and a line or two about their interests or achievements.</p>
       </article>
 
-      <article class="organiser-card card">
-        <div class="organiser-image-wrap">
-          <img src="images/organisers/organiser3.jpg" alt="Organiser 3" class="organiser-image" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
-        </div>
-        <h3 class="organiser-name">Organiser Name 3</h3>
-        <p class="organiser-bio">Short paragraph about this organiser—background, role in PakSolve, and a line or two about their interests or achievements.</p>
+
+      <!-- ── ORGANISER 3 ── -->
+      <article class="organiser-card">
+        <img src="images/organisers/organiser3.jpg" alt="Organiser 3" class="organiser-photo" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
+        <h3>Organiser Name 3</h3>
+        <p>Short paragraph about this organiser — background, role in PakSolve, and a line or two about their interests or achievements.</p>
       </article>
 
-      <article class="organiser-card card">
-        <div class="organiser-image-wrap">
-          <img src="images/organisers/organiser4.jpg" alt="Organiser 4" class="organiser-image" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
-        </div>
-        <h3 class="organiser-name">Organiser Name 4</h3>
-        <p class="organiser-bio">Short paragraph about this organiser—background, role in PakSolve, and a line or two about their interests or achievements.</p>
+
+      <!-- ── ORGANISER 4 ── -->
+      <article class="organiser-card">
+        <img src="images/organisers/organiser4.jpg" alt="Organiser 4" class="organiser-photo" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
+        <h3>Organiser Name 4</h3>
+        <p>Short paragraph about this organiser — background, role in PakSolve, and a line or two about their interests or achievements.</p>
       </article>
 
-      <article class="organiser-card card">
-        <div class="organiser-image-wrap">
-          <img src="images/organisers/organiser5.jpg" alt="Organiser 5" class="organiser-image" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
-        </div>
-        <h3 class="organiser-name">Organiser Name 5</h3>
-        <p class="organiser-bio">Short paragraph about this organiser—background, role in PakSolve, and a line or two about their interests or achievements.</p>
+
+      <!-- ── ORGANISER 5 ── -->
+      <article class="organiser-card">
+        <img src="images/organisers/organiser5.jpg" alt="Organiser 5" class="organiser-photo" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
+        <h3>Organiser Name 5</h3>
+        <p>Short paragraph about this organiser — background, role in PakSolve, and a line or two about their interests or achievements.</p>
       </article>
 
-      <article class="organiser-card card">
-        <div class="organiser-image-wrap">
-          <img src="images/organisers/organiser6.jpg" alt="Organiser 6" class="organiser-image" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
-        </div>
-        <h3 class="organiser-name">Organiser Name 6</h3>
-        <p class="organiser-bio">Short paragraph about this organiser—background, role in PakSolve, and a line or two about their interests or achievements.</p>
+
+      <!-- ── ORGANISER 6 ── -->
+      <article class="organiser-card">
+        <img src="images/organisers/organiser6.jpg" alt="Organiser 6" class="organiser-photo" loading="lazy" onerror="this.src='https://placehold.co/280x280/e2e8f0/64748b?text=Photo'">
+        <h3>Organiser Name 6</h3>
+        <p>Short paragraph about this organiser — background, role in PakSolve, and a line or two about their interests or achievements.</p>
       </article>
+
     </div>
+    <!-- End of organiser grid -->
+
   </main>
 
+
+  <!-- ── FOOTER ── same on every page -->
   <footer class="site-footer">
-    <p>&copy; PakSolve. <a href="index.html">Home</a> · <a href="faq.html">FAQ</a> · <a href="organisers.html">Organisers</a> · <a href="signup.html">Sign Up</a></p>
+
+    <div class="footer-contact">
+      <h3 class="footer-contact-title">Contact us</h3>
+      <div class="footer-contact-links">
+        <a href="mailto:contact@paksolve.org" class="footer-contact-item">Email</a>
+        <a href="https://wa.me/920000000000" class="footer-contact-item" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#" class="footer-contact-item">Facebook</a>
+        <a href="#" class="footer-contact-item">Instagram</a>
+        <a href="#" class="footer-contact-item">Twitter</a>
+        <a href="#" class="footer-contact-item">LinkedIn</a>
+      </div>
+    </div>
+
+    <p class="footer-nav">
+      &copy; PakSolve.
+      <a href="index.html">Home</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="organisers.html">Organisers</a> ·
+      <a href="signup.html">Sign Up</a>
+    </p>
+
   </footer>
+
 </body>
 </html>
